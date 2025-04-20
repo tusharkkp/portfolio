@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            color: white;
+            scroll-behavior: smooth;
+        }
+        .container {
+            display: flex;
+            flex-grow: 1;
+        }
+        .left-half {
+            width: 50%;
+            background-color: #1e1e1e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .left-half img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .right-half {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #282828;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu button {
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 200px;
+        }
+        .menu button:hover {
+            background-color: #008ba3;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            margin: 20px auto;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            width: 80%;
+            text-align: left;
+        }
+        a {
+            color: #00bcd4;
+        }
+        .footer {
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-half">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h1 style="color: rgb(0, 255, 225);">Tushar Kaldate</h1>
+            <p style="color: rgb(0, 255, 225);">FY Computer Engineering Student | Aspiring Freelancer | </p>
+            
+        </div>
+        
+        <div class="right-half">
+            <div class="menu">
+                <button onclick="showSection('about')">About Me</button>
+                <button onclick="showSection('skills')">Skills</button>
+                <button onclick="showSection('projects')">Projects</button>
+                <button onclick="showSection('achievements')">Achievements</button>
+                <button onclick="showSection('photographs')">Photographs</button>
+                <button onclick="showSection('contact')">Contact</button>
+            </div>
+        </div>
+    </div>
+    
+    <section id="about" class="content">
+        <h2>About Me</h2>
+        <pre>
+            <section style="background-color: rgba(255, 230, 0, 0.16);"> 
+            Hi, I'm <b>Tushar</b>, a <b>Computer Engineering student</b> at <b>MIT Academy of Engineering</b>, Alandi, Pune. Passionate about <b>technology</b>,
+
+             <b>problem-solving</b>, and <b>innovation</b>, I'm on a journey to build a strong foundation in <b>software development</b> and <b>IT</b>. 
+             
+             I have a keen interest in <b>coding</b>, <b>freelancing</b>, and <b>entrepreneurship</b>, constantly seeking opportunities to learn and apply
+             
+             my skills. My technical expertise extends to <b>programming</b>, <b>Linux</b>, and <b>system optimization</b>, and I enjoy working on projects
+             
+             that enhance <b>user experience</b> and <b>efficiency</b>.Currently, I am exploring creative subjects like <b>Creative Technologies in AI</b> 
+             
+             and <b>Design Thinking</b>, which help me approach problem-solving with a <b>human-centered perspective</b>.Beyond academics, I’m working
+             
+             on improving my <b>communication skills</b>, <b>networking</b>, and overall <b>self-growth</b> to make the most of my college journey.
+            
+            Feel free to explore my portfolio to check out my <b>projects</b> and <b>experiences</b>!
+            </pre>
+            
+            
+            
+    </section>
+    
+    <section id="skills" class="content">
+        <h2>Skills</h2>
+        <ul>
+            <li style="color: rgb(0, 123, 255);"><strong>HTML</strong></li>
+            <li style="color: rgb(0, 149, 255);"><strong>C language</strong></li>
+            <li style="color: rgb(0, 174, 255);"><strong>Python</strong></li>
+            <li style="color: rgb(23, 173, 247);"><strong>C++</strong></li>
+            <li style="color: rgb(51, 164, 250);"><strong>Linux & Shell Scripting</strong></li>
+            <li style="color: rgb(90, 200, 247);"><strong>Problem Solving</strong></li>
+        </ul>
+        
+    </section>
+    
+    <section id="projects" class="content">
+        <h1>Projects</h1>
+        <ol>
+            <h2><li><a href="https://gamma.app/docs/Tours-and-Travels-Management-Company-uzqf0toudxyk8ia"><strong>Tours and Travells Manegment Company</strong> - A linux app for managing travlling.</a></li></h2>
+            <ul>
+                <li style="color: #4CAF50;"><strong>Project Title:</strong> Tours and Travels Management System</li>
+                
+                <li style="color: #FF9800;"><strong>Introduction:</strong>
+                  <ul>
+                    <li style="color: #ffffff;">A Linux-based system for tour booking, customer management, and payments.</li>
+                    <li style="color: #ffffff;">Built using Shell scripting, Linux commands.</li>
+                  </ul>
+                </li>
+              
+                <li style="color: #FF9800;"><strong>Objectives:</strong>
+                  <ul>
+                    <li style="color: #ffffff;">Automate tour package bookings and management.</li>
+                    <li style="color: #ffffff;">Ensure secure user authentication and role-based access.</li>
+                  </ul>
+                </li>
+              
+                <li style="color: #FF9800;"><strong>Features:</strong>
+                  <ul>
+                    <li style="color: #ffffff;"><strong>User:</strong> View, book, modify, or cancel tours; track payments.</li>
+                    <li style="color: #ffffff;"><strong>Admin:</strong> Manage packages, customers, bookings, and generate reports.</li>
+                  </ul>
+                </li>
+              
+                <li style="color: #FF9800;"><strong>Technology Stack:</strong>
+                  <ul>
+                    <li style="color: #ffffff;"><strong>OS:</strong> Linux (Ubuntu/Fedora)</li>
+                    <li style="color: #ffffff;"><strong>Tools:</strong> Shell Scripting</li>
+                    <li style="color: #ffffff;"><strong>Security:</strong> Linux file permissions, encryption, user roles</li>
+                  </ul>
+                </li>
+              
+                <li style="color: #FF9800;"><strong>Implementation:</strong>
+                  <ul>
+                    <li style="color: #ffffff;">CLI-based Booking System using shell scripts.</li>
+                    <li style="color: #ffffff;">Database Storage for managing users and bookings.</li>
+                    <li style="color: #ffffff;">Automation & Security via cron jobs, permissions, and logging.</li>
+                  </ul>
+                </li>
+              
+                <li style="color: #FF9800;"><strong>Challenges & Future Enhancements:</strong>
+                  <ul>
+                    <li style="color: #ffffff;"><strong>Challenges:</strong> Handling concurrent bookings, optimizing database queries.</li>
+                    <li style="color: #ffffff;"><strong>Future Scope:</strong> GUI/web version, chatbot, API integration.</li>
+                  </ul>
+                </li>
+              
+                <li style="color: #FF9800;"><strong>Conclusion:</strong>
+                  <ul>
+                    <li style="color: #ffffff;">Demonstrates Linux administration, shell scripting, and database management.</li>
+                    <li style="color: #ffffff;">A scalable solution with future automation potential.</li>
+                  </ul>
+                </li>
+              </ul>
+              
+
+ 
+            <h2><li><a href="https://gamma.app/docs/Tours-and-Travels-Management-Company-uzqf0toudxyk8ia"><strong>Date and Time Formatter</strong> - A linux shell script for date and time.</a></li></h2>
+            <ul>
+                <li style="color: #4CAF50;"><strong>Project Title:</strong> Linux Date and Time Formatter</li>
+                
+                <li style="color: #FF9800;"><strong>Introduction:</strong>
+                    <ul>
+                        <li style="color: #ffffff;">A Linux-based shell script to format and manipulate date and time efficiently.</li>
+                        <li style="color: #ffffff;">Uses Linux <span class="highlight">date</span> command to display, convert, and customize date formats.</li>
+                    </ul>
+                </li>
+                
+                <li style="color: #FF9800;"><strong>Objectives:</strong>
+                    <ul>
+                        <li style="color: #ffffff;">Format date and time in various styles (<span class="highlight">YYYY-MM-DD</span>, <span class="highlight">DD/MM/YYYY</span>, etc.).</li>
+                        <li style="color: #ffffff;">Convert time zones and calculate date differences.</li>
+                        <li style="color: #ffffff;">Automate date-related tasks using <span class="highlight">cron jobs</span>.</li>
+                    </ul>
+                </li>
+                
+                <li style="color: #FF9800;"><strong>Features:</strong>
+                    <ul>
+                        <li style="color: #ffffff;"><strong>Display:</strong> Current date and time in multiple formats.</li>
+                        <li style="color: #ffffff;"><strong>Convert:</strong> Dates between different formats and time zones.</li>
+                        <li style="color: #ffffff;"><strong>Calculate:</strong> Difference between two dates.</li>
+                        <li style="color: #ffffff;"><strong>Automate:</strong> Periodic time-based tasks with cron jobs.</li>
+                    </ul>
+                </li>
+                
+                <li style="color: #FF9800;"><strong>Technology Stack:</strong>
+                    <ul>
+                        <li style="color: #ffffff;"><strong>OS:</strong> Linux (<span class="highlight">Ubuntu</span>, <span class="highlight">Fedora</span>, <span class="highlight">Debian</span>)</li>
+                        <li style="color: #ffffff;"><strong>Tools:</strong> Shell Scripting (<span class="highlight">bash</span>), <span class="highlight">date command</span>, <span class="highlight">cron jobs</span></li>
+                    </ul>
+                </li>
+                
+                <li style="color: #FF9800;"><strong>Implementation:</strong>
+                    <ul>
+                        <li style="color: #ffffff;">Uses the <span class="highlight">date</span> command for formatting and manipulation.</li>
+                        <li style="color: #ffffff;">Accepts user input for custom date formats.</li>
+                        <li style="color: #ffffff;">Automates scheduled tasks via <span class="highlight">cron jobs</span>.</li>
+                    </ul>
+                </li>
+                
+                <li style="color: #FF9800;"><strong>Challenges & Future Enhancements:</strong>
+                    <ul>
+                        <li style="color: #ffffff;"><strong>Challenges:</strong> Handling different time zones and daylight savings.</li>
+                        <li style="color: #ffffff;"><strong>Future Scope:</strong> GUI-based date formatter, integration with web apps.</li>
+                    </ul>
+                </li>
+                
+                <li style="color: #FF9800;"><strong>Conclusion:</strong>
+                    <ul>
+                        <li style="color: #ffffff;">A simple yet powerful date and time manipulation tool for Linux users.</li>
+                        <li style="color: #ffffff;">Demonstrates shell scripting skills and Linux command-line expertise.</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            
+        </ol>
+    </section>
+    
+
+    <section id="achievements" class="content">
+        <h2>Achievements</h2>
+        <ul>
+            <li style="color: rgb(0, 255, 225);"><strong>FY 1st Sem SGPA : 8.90</strong></li>
+            <li style="color: rgb(0, 255, 255);"><strong>Completed Linux Certification</strong></li>
+        </ul>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <img src="c.png" alt="certificate 1" style="width: 300px; height: auto; border-radius: 8px;">
+            <img src="c1.png" alt="certificate 2" style="width: 300px; height: auto; border-radius: 8px;">
+        </div>
+    </section>
+    
+    
+
+    <section id="photographs" class="content">
+        <h2>Photographs by Me</h2>
+        <p>Here are some of the photographs I have captured:</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+            <img src="photo1.jpg" alt="Photograph 1" style="width: 300px; height: auto; border-radius: 8px;">
+            <img src="photo2.jpg" alt="Photograph 2" style="width: 300px; height: auto; border-radius: 8px;">
+            <img src="photo3.jpg" alt="Photograph 3" style="width: 300px; height: auto; border-radius: 8px;">
+        </div>
+    </section>
+
+  
+     <section id="contact" class="content"> 
+        <h2>Contact</h2>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 10px;">
+            <a href="https://www.linkedin.com/in/tushar-kaldate-2b5276262" target="_blank">
+                <img src="link.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+            </a>
+            <a href="mailto:tusharkaldate110@gmail.com">
+                <img src="email.png" alt="Email" style="width: 40px; height: 40px;">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="github.png" alt="GitHub" style="width: 40px; height: 40px;">
+            </a>
+        </div>
+    </section>
+    
+
+    
+
+</body>
+</html>

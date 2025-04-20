@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+            color: white;
+            height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .left-half, .right-half {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .left-half {
+            background: #222;
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .left-half img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .left-half h1 {
+            color: #00bcd4;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .left-half p {
+            color: #00bcd4;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .right-half {
+            background: #282828;
+            color: #fff;
+        }
+
+        .menu button {
+            background: #00bcd4;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .menu button:hover {
+            background: #008ba3;
+        }
+
+        .content {
+            display: none;
+            padding: 30px;
+            margin: 30px auto;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            width: 80%;
+            text-align: left;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff9800;
+        }
+
+        .footer {
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            color: #00bcd4;
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .content pre {
+            background-color: rgba(255, 230, 0, 0.16);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .photo-gallery {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .photo-gallery img {
+            width: 300px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Timeline styles */
+        #timeline {
+            padding: 30px;
+            margin: 30px auto;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            width: 80%;
+            text-align: left;
+        }
+
+        #timeline h2 {
+            font-size: 2rem;
+            color: #00bcd4;
+            margin-bottom: 20px;
+        }
+
+        #timeline ul {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+
+        #timeline ul li {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        #timeline ul li:before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #00bcd4;
+            border-radius: 50%;
+        }
+
+        #timeline ul li strong {
+            color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-half">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h1>Tushar Kaldate</h1>
+            <p>FY Computer Engineering Student | Aspiring Freelancer</p>
+        </div>
+        
+        <div class="right-half">
+            <div class="menu">
+                <button onclick="showSection('about')">About Me</button>
+                <button onclick="showSection('skills')">Skills</button>
+                <button onclick="showSection('projects')">Projects</button>
+                <button onclick="showSection('achievements')">Achievements</button>
+                <button onclick="showSection('photographs')">Photographs</button>
+                <button onclick="showSection('contact')">Contact</button>
+                <button onclick="showSection('timeline')">Timeline</button> <!-- New Button for Timeline -->
+            </div>
+        </div>
+    </div>
+    
+    <section id="about" class="content">
+        <h2>About Me</h2>
+        <pre>
+Hi, I'm <b>Tushar</b>, a <b>Computer Engineering student</b> at <b>MIT Academy of Engineering</b>, Alandi, Pune. Passionate about <b>technology</b>, <b>problem-solving</b>, and <b>innovation</b>, I'm on a journey to build a strong foundation in <b>software development</b> and <b>IT</b>. 
+I have a keen interest in <b>coding</b>, <b>freelancing</b>, and <b>entrepreneurship</b>, constantly seeking opportunities to learn and apply my skills.
+        </pre>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="content">
+        <h2>Timeline</h2>
+        <ul>
+            <li>
+                <strong>15th September 2005</strong> - Born
+            </li>
+            <li>
+                <strong>2022</strong> - Completed SSC with 98.80%
+            </li>
+            <li>
+                <strong>2025</strong> - Completed HSC with 75%
+            </li>
+            <li>
+                <strong>Currently</strong> - Pursuing BTech in Computer Engineering from MIT Academy of Engineering, Alandi, Pune
+            </li>
+        </ul>
+    </section>
+    
+    <section id="skills" class="content">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>HTML</strong></li>
+            <li><strong>C language</strong></li>
+            <li><strong>Python</strong></li>
+            <li><strong>C++</strong></li>
+            <li><strong>Linux & Shell Scripting</strong></li>
+            <li><strong>Problem Solving</strong></li>
+        </ul>
+    </section>
+    
+    <section id="projects" class="content">
+        <h2>Projects</h2>
+        <ol>
+            <li><a href="https://gamma.app/docs/Tours-and-Travels-Management-Company-uzqf0toudxyk8ia">Tours and Travels Management System</a></li>
+            <li><a href="https://gamma.app/docs/Tours-and-Travels-Management-Company-uzqf0toudxyk8ia">Date and Time Formatter</a></li>
+        </ol>
+    </section>
+    
+    <section id="achievements" class="content">
+        <h2>Achievements</h2>
+        <ul>
+            <li><strong>FY 1st Sem SGPA: 8.90</strong></li>
+            <li><strong>Completed Linux Certification</strong></li>
+        </ul>
+    </section>
+    
+    <section id="photographs" class="content">
+        <h2>Photographs by Me</h2>
+        <div class="photo-gallery">
+            <img src="photo1.jpg" alt="Photograph 1">
+            <img src="photo2.jpg" alt="Photograph 2">
+            <img src="photo3.jpg" alt="Photograph 3">
+        </div>
+    </section>
+    
+    <section id="contact" class="content">
+        <h2>Contact</h2>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/tushar-kaldate-2b5276262" target="_blank">
+                <img src="link.png" alt="LinkedIn">
+            </a>
+            <a href="mailto:tusharkaldate110@gmail.com">
+                <img src="email.png" alt="Email">
+            </a>
+            <a href="https://github.com" target="_blank">
+                <img src="github.png" alt="GitHub">
+            </a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        &copy; 2025 Tushar. All Rights Reserved.
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            let sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
